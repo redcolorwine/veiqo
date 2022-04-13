@@ -1,0 +1,27 @@
+.basicArticle {
+    width: 350px;
+    margin: 15px;
+}
+.basicArticle p{
+    color:rgba(0, 0, 0, 0.5);
+    font-size: 11pt;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: normal;
+}
+.basicArticle h4 {
+    font-weight: 500;
+    font-size: 16pt;
+    font-family:'Times New Roman';
+    margin: 5px;
+}
+.basicArticle img {
+    width: 350px;
+    height: 230px;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+.basicArticle img:hover{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}

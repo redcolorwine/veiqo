@@ -1,0 +1,82 @@
+.header {
+    margin: 0;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'PoiretOne';
+    font-size: 30pt;
+}
+
+.header nav li {
+    display: inline;
+    margin-left: 25px;
+}
+.search {
+    display: inline;
+    margin-left: 25px;
+}
+.search input{
+    display: inline;
+    font-family: 'Century Gothic';
+    outline: none;
+  
+}
+.search button{
+    display: inline;
+    margin-right: 10px;
+    background-color: white;
+    border: none;
+}
+.header nav li a {
+    text-decoration: none;
+    font-family: 'Century Gothic';
+    font-weight: 500;
+    font-size: 15pt;
+    color: black;
+    transition: 0.5s;
+}
+
+.header nav li a:hover {
+    color: bisque;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: "Grape";
+    src: url("./../../media/fonts/GrapeNuts-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Josefine";
+    src: url("./../../media/fonts/JosefinSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Amatic";
+    src: url("./../../media/fonts/AmaticSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SpaceMono";
+    src: url("./../../media/fonts/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PoiretOne";
+    src: url("./../../media/fonts/PoiretOne-Regular.ttf");
+}
