@@ -6,7 +6,7 @@ const BigArticle = (props) => {
             <img src={props.image} alt="" />
             <div className={cmedia.bigItemText}>
                 <h4>{props.title}</h4>
-                <p>{props.about}</p>
+                <p>{props.genre}</p>
             </div>
         </div>
     )

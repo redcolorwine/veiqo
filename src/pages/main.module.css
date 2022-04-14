@@ -44,19 +44,60 @@
     color: black;
     cursor: pointer;
 }
-.bestArticles p{
+
+.bestArticles p {
     font-family: 'Century Gothic';
     font-size: 20pt;
     letter-spacing: 10px;
 }
+
 .bestArtItems {
     margin: 0 auto;
-    width: 1600px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
+.middleArticles {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.middleArticle {
+    width: 700px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.middleArticle:hover {
+    transform: scale(1.02, 1.02);
+    cursor: pointer;
+}
+
+.middleArticle h4 {
+    font-size: 24pt;
+    margin: 0;
+    padding: 0;
+}
+
+.middleArticle p {
+    font-size: 10pt;
+    color:gray;
+}
+
+.middleArticle img {
+    height: 400px;
+    width: 700px;
+    border-radius: 5px;
+}
 
 @font-face {
     font-family: "Amatic";

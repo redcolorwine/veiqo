@@ -52,8 +52,14 @@
 }
 
 
-
-
+.header h1 a{
+    text-decoration: none;
+    color:black;
+    transition: 0.5s;
+}
+.header h1 a:hover{
+    color:blanchedalmond;
+}
 
 
 @font-face {

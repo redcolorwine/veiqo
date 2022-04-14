@@ -1,12 +1,13 @@
 .basicArticle {
     width: 350px;
-    margin: 15px;
+    margin: 45px;
 }
 .basicArticle p{
     color:rgba(0, 0, 0, 0.5);
     font-size: 11pt;
     font-weight: 600;
     margin: 0;
+    margin-right: 3px;
     letter-spacing: normal;
 }
 .basicArticle h4 {
@@ -24,4 +25,14 @@
 .basicArticle img:hover{
     cursor: pointer;
     transform: scale(1.1,1.1);
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about img{
+    height: 13px;
+    width: 13px;
+    margin-left: 3px;
 }
