@@ -90,13 +90,31 @@
 
 .middleArticle p {
     font-size: 10pt;
-    color:gray;
+    color: gray;
 }
 
 .middleArticle img {
     height: 400px;
     width: 700px;
     border-radius: 5px;
+}
+
+
+.nextButton {
+    background-color: black;
+    color: white;
+    font-family: 'Century Gothic';
+    padding: 5px;
+    font-size: 12pt;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.nextButton:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
 }
 
 @font-face {

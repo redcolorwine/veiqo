@@ -5,11 +5,38 @@ import middleImg from './../media/images/mountains.jpg';
 import BasicArticle from '../components/basicArticle/basicArticle';
 import BigArticle from '../components/bigArticle/bigArticle';
 import MiddleArticle from '../components/middleArticle/middleArticle';
+import { useState } from 'react';
 const Main = (props) => {
+    let contentPerPage = 6;
+    let totalCount = 32;
+    let pageCount = Math.floor(totalCount / contentPerPage);
+    let endPortion = 0;
+    const [currentPortion, setPortion] = useState(6);
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    let alength = getRandomInt(props.articles.length);
+
     let bestArticles = props.articles.map(article => {
-        return (<BasicArticle key={article.id} rate={article.rate} views={article.views} image={article.image} title={article.title} genre={article.genre} id={article.id} />)
+        if (article.rate == 5) {
+            return (<BasicArticle key={article.id} rate={article.rate} views={article.views} image={article.image} title={article.title} genre={article.genre} id={article.id} />)
+        }
     })
-    
+
+    let allArticle = props.articles.slice(0, currentPortion).map(article => {
+
+        return (<MiddleArticle key={article.id} rate={article.rate} views={article.views} image={article.image} title={article.title} genre={article.genre} id={article.id} />)
+
+    })
+
+    const onNextClick = () => {
+        if (currentPortion < totalCount) {
+            setPortion(currentPortion + contentPerPage);
+        } else {
+            alert('Больше нет контента')
+        }
+    }
     return (
         <div className={cmedia.main}>
             <div className={cmedia.mainBlock}>
@@ -24,62 +51,13 @@ const Main = (props) => {
                 <p>Лучшие статьи</p>
                 <div className={cmedia.bestArtItems}>
                     {bestArticles}
-                    <BasicArticle image={baseimg} title="Тут что-то новенькое!" genre="Путешествия, Фотография" />
-                    <BasicArticle image={baseimg} title="Новые просторы: лёд и холодные воды прекрасного Амура" genre="Путешествия, Фотография" />
-                    <BasicArticle image={baseimg} title="Новые просторы: лёд и холодные воды прекрасного Амура" genre="Путешествия, Фотография" />
-                    <BasicArticle image={baseimg} title="Новые просторы: лёд и холодные воды прекрасного Амура. И еще много чего интересного" genre="Путешествия, Фотография" />
-                    <BasicArticle image={baseimg} title="Новые просторы: лёд и холодные воды прекрасного Амура. И еще много чего интересного" genre="Путешествия, Фотография" />
-                    <BasicArticle image={baseimg} title="Новые просторы: лёд и холодные воды прекрасного Амура. И еще много чего интересного" genre="Путешествия, Фотография" />
-                    <BasicArticle image={baseimg} title="Новые просторы: лёд и холодные воды прекрасного Амура. И еще много чего интересного" genre="Путешествия, Фотография" />
-                    <BasicArticle image={baseimg} title="Новые просторы: лёд и холодные воды прекрасного Амура. И еще много чего интересного" genre="Путешествия, Фотография" />
                 </div>
-                <BigArticle image={bigImg} title="Жили были два кота" genre="Разное" />
-
+                <BigArticle image={props.articles[alength].image} title={props.articles[alength].title} genre={props.articles[alength].genre} />
                 <div className={cmedia.middleArticles}>
-                    <MiddleArticle image={middleImg} title="Новый постик!" genre="Приключения" />
-                    <div className={cmedia.middleArticle}>
-                        <img src={middleImg} alt="" />
-                        <div className={cmedia.middleArtText}>
-                            <h4>Какой-то новый очень интересный пост</h4>
-                            <p>Путешествия, Разное</p>
-                        </div>
-                    </div>
-                    <div className={cmedia.middleArticle}>
-                        <img src={middleImg} alt="" />
-                        <div className={cmedia.middleArtText}>
-                            <h4>Какой-то новый очень интересный пост</h4>
-                            <p>Путешествия, Разное</p>
-                        </div>
-                    </div>
-                    <div className={cmedia.middleArticle}>
-                        <img src={middleImg} alt="" />
-                        <div className={cmedia.middleArtText}>
-                            <h4>Какой-то новый очень интересный пост</h4>
-                            <p>Путешествия, Разное</p>
-                        </div>
-                    </div>
-                    <div className={cmedia.middleArticle}>
-                        <img src={middleImg} alt="" />
-                        <div className={cmedia.middleArtText}>
-                            <h4>Какой-то новый очень интересный пост</h4>
-                            <p>Путешествия, Разное</p>
-                        </div>
-                    </div>
-                    <div className={cmedia.middleArticle}>
-                        <img src={middleImg} alt="" />
-                        <div className={cmedia.middleArtText}>
-                            <h4>Какой-то новый очень интересный пост</h4>
-                            <p>Путешествия, Разное</p>
-                        </div>
-                    </div>
-                    <div className={cmedia.middleArticle}>
-                        <img src={middleImg} alt="" />
-                        <div className={cmedia.middleArtText}>
-                            <h4>Какой-то новый очень интересный пост</h4>
-                            <p>Путешествия, Разное</p>
-                        </div>
-                    </div>
+                    {allArticle}
+
                 </div>
+                <button className={cmedia.nextButton} onClick={onNextClick}>Показать еще</button>
             </div>
         </div>
     )
