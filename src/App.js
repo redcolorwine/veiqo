@@ -3,10 +3,10 @@ import './App.css';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import MainContainer from './pages/mainContainer';
-import Music from './pages/music/music';
-import Other from './pages/other/other';
-import Photography from './pages/photography/photography';
-import Travel from './pages/travel/travel';
+import MusicContainer from './pages/music/musicContainer';
+import OtherContainer from './pages/other/otherContainer';
+import PhotographyContainer from './pages/photography/photographyContainer';
+import TravelContainer from './pages/travel/travelContainer';
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
       <div className='app_wrapper'>
         <Routes>
           <Route path='/' element={<MainContainer />} />
-          <Route path='/music' element={<Music />} />
-          <Route path='/photography' element={<Photography />} />
-          <Route path='/travel' element={<Travel />} />
-          <Route path='/other' element={<Other />} />
+          <Route path='/music' element={<MusicContainer />} />
+          <Route path='/photography' element={<PhotographyContainer />} />
+          <Route path='/travel' element={<TravelContainer />} />
+          <Route path='/other' element={<OtherContainer />} />
           <Route path='/*' element={<MainContainer />} />
         </Routes>
       </div>

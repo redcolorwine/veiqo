@@ -1,0 +1,37 @@
+.horizontalArticle {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.horizontalArticle h4 {
+    font-weight: 500;
+    font-size: 20pt;
+    font-family: 'Times New Roman';
+    margin: 5px;
+}
+
+.horizontalArticle p {
+    font-weight: 500;
+    font-size: 12pt;
+    font-family: 'Century Gothic';
+    margin: 5px;
+}
+
+.horizontalArticle img {
+    height: 250px;
+    width: 400px;
+}
+
+.horizontalArticle:hover {
+    transform: scale(1.02, 1.02);
+    cursor: pointer;
+}
+
+.textBlock {
+    width: 400px;
+}

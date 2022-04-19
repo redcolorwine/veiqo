@@ -1,0 +1,20 @@
+.other {
+    text-align: center;
+}
+
+.other h1 {
+    font-family: 'Poiret';
+    font-size: 30pt;
+}
+
+.other p {
+    font-family: 'Century Gothic';
+    font-size: 17pt;
+    color: gray;
+}
+
+
+@font-face {
+    font-family: "Poiret";
+    src: url("./../../media/fonts/PoiretOne-Regular.ttf");
+}
