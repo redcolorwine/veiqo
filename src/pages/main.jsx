@@ -52,7 +52,7 @@ const Main = (props) => {
                 <div className={cmedia.bestArtItems}>
                     {bestArticles}
                 </div>
-                <BigArticle image={props.articles[alength].image} title={props.articles[alength].title} genre={props.articles[alength].genre} />
+                <BigArticle id={props.articles[alength].id} image={props.articles[alength].image} title={props.articles[alength].title} genre={props.articles[alength].genre} />
                 <div className={cmedia.middleArticles}>
                     {allArticle}
 

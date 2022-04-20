@@ -4,7 +4,7 @@ import HorizontalArticle from '../../components/horizontalArticle/horizontalArti
 const Music = (props) => {
     let musicArticles = props.articles.map(article => {
         if (article.genre.includes('Музыка')) {
-            return (<HorizontalArticle title={article.title} genre={article.genre} image={article.image} rate={article.rate} />)
+            return (<HorizontalArticle id={article.id} title={article.title} genre={article.genre} image={article.image} rate={article.rate} />)
         }
     })
     return (

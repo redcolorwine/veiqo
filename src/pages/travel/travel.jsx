@@ -4,7 +4,7 @@ import HorizontalArticle from '../../components/horizontalArticle/horizontalArti
 const Travel = (props) => {
     let travelArticles = props.articles.map(article => {
         if (article.genre.includes('Путешествия')) {
-            return (<HorizontalArticle title={article.title} genre={article.genre} image={article.image} rate={article.rate} />)
+            return (<HorizontalArticle id={article.id} title={article.title} genre={article.genre} image={article.image} rate={article.rate} />)
         }
     })
     return (

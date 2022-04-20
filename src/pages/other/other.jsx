@@ -1,10 +1,10 @@
-import HorizontalArticle from '../../components/horizontalArticle/horizontalArticle';
 import cmedia from './other.module.css';
+import HorizontalArticle from '../../components/horizontalArticle/horizontalArticle';
 
 const Other = (props) => {
     let otherArticles = props.articles.map(article => {
         if (article.genre.includes('Разное')) {
-            return (<HorizontalArticle title={article.title} genre={article.genre} image={article.image} rate={article.rate} />)
+            return (<HorizontalArticle id={article.id} title={article.title} genre={article.genre} image={article.image} rate={article.rate} />)
         }
     })
     return (

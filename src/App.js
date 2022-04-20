@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
+import ContentPageContainer from './pages/contentPage/contentPageContainer';
 import MainContainer from './pages/mainContainer';
 import MusicContainer from './pages/music/musicContainer';
 import OtherContainer from './pages/other/otherContainer';
@@ -15,6 +16,7 @@ function App() {
       <div className='app_wrapper'>
         <Routes>
           <Route path='/' element={<MainContainer />} />
+          <Route path='/:id' element={<ContentPageContainer />} />
           <Route path='/music' element={<MusicContainer />} />
           <Route path='/photography' element={<PhotographyContainer />} />
           <Route path='/travel' element={<TravelContainer />} />
